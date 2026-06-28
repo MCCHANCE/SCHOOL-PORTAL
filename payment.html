@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Fee Payment | Union Secondary School</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      body {
+        background: #f4f7fb;
+      }
+
+      .page-header {
+        background: linear-gradient(135deg, #0d6efd, #198754);
+        color: white;
+        padding: 60px 0;
+      }
+
+      .payment-card {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .summary-card {
+        background: #0d6efd;
+        color: white;
+        border-radius: 20px;
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 12px;
+      }
+
+      .btn {
+        border-radius: 30px;
+      }
+
+      footer {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-mortarboard-fill"></i>
+          <h1 class="display-4 fw-bold">Welcome to Union Secondary School Portal</h1>
+          Secondary School
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">School Fees</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header text-center">
+      <div class="container">
+        <h1 class="fw-bold">
+          <i class="bi bi-credit-card"></i>
+          School Fee Payment
+        </h1>
+        <p>Pay your school fees securely online.</p>
+      </div>
+    </section>
+
+    <!-- PAYMENT SECTION -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- FORM -->
+        <div class="col-lg-8">
+          <div class="card payment-card">
+            <div class="card-body p-4">
+              <h4 class="mb-4">Student Information</h4>
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label>Student Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="John David"
+                      readonly
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label>Admission Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="SEC/2026/0145"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label>Class</label>
+                    <select class="form-select">
+                      <option>JSS1</option>
+                      <option>JSS2</option>
+                      <option>JSS3</option>
+                      <option selected>SS2</option>
+                      <option>SS3</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label>Academic Session</label>
+                    <select class="form-select">
+                      <option selected>2026/2027</option>
+                      <option>2025/2026</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label>Term</label>
+                    <select class="form-select">
+                      <option>First Term</option>
+                      <option>Second Term</option>
+                      <option>Third Term</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label>Payment Type</label>
+                    <select class="form-select">
+                      <option>Full Payment</option>
+                      <option>Part Payment</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label>Amount to Pay (₦)</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter Amount"
+                  />
+                </div>
+                <h5 class="mt-4">Payment Method</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="payment"
+                    checked
+                  />
+                  <label class="form-check-label"> Remita </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" />
+                  <label class="form-check-label"> Debit/Credit Card </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="payment" />
+                  <label class="form-check-label"> Bank Transfer </label>
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="radio" name="payment" />
+                  <label class="form-check-label"> USSD </label>
+                </div>
+                <div class="d-grid gap-3">
+                  <button class="btn btn-warning btn-lg">
+                    <i class="bi bi-file-earmark-text"></i>
+                    Generate Invoice
+                  </button>
+                  <a href="receipt.html" class="btn btn-success btn-lg">
+                    <i class="bi bi-credit-card-fill"></i>
+                    Proceed to Payment
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="col-lg-4">
+          <div class="card summary-card">
+            <div class="card-body">
+              <h4>Payment Summary</h4>
+              <hr />
+              <p>
+                Student
+                <span class="float-end"> John David </span>
+              </p>
+              <p>
+                Class
+                <span class="float-end"> SS2 </span>
+              </p>
+              <p>
+                Outstanding Fee
+                <span class="float-end"> ₦175,000 </span>
+              </p>
+              <p>
+                Amount Paid
+                <span class="float-end"> ₦80,000 </span>
+              </p>
+              <p>
+                Balance
+                <span class="float-end"> ₦95,000 </span>
+              </p>
+              <hr />
+              <h4>
+                Amount Due
+                <span class="float-end"> ₦95,000 </span>
+              </h4>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5>Why Pay Online?</h5>
+              <ul>
+                <li>Secure Transactions</li>
+                <li>Instant Receipt</li>
+                <li>Available 24/7</li>
+                <li>Fast Payment Confirmation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>© 2026 Union Secondary School Portal</p>
+
+        <p>Powered by Bootstrap 5.3</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
